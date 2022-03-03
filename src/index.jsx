@@ -5,10 +5,10 @@ import App from './App';
 
 const rootElement = document.getElementById('root');
 
-const render = () => {
-  ReactDOM.render(<App />, rootElement);
-}
+// const render = () => {
+// }
+ReactDOM.render(<App />, rootElement);
 
-if (module.hot) {
-  module.hot.accept('./App.jsx', () => {setTimeout(render)}); 
-}
+// if (module.hot) {
+//   module.hot.accept('./App.jsx', () => {setTimeout(render)}); 
+// }
