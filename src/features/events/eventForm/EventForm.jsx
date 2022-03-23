@@ -14,6 +14,7 @@ export default function EventForm({ setFormOpen, setEvents, createEvent, selecte
   };
 
   const [values, setValues] = useState(initialValues);
+  // console.log("VALUES: ", values)
 
   const handleFormSubmit = () => {
     createEvent({...values, id: cuid(), hostedBy: 'Lloyd', attendees: [], hostPhotoURL: '/assets/user.png'})
@@ -34,7 +35,7 @@ export default function EventForm({ setFormOpen, setEvents, createEvent, selecte
             type="text"
             placeholder="Event Title"
             name="title"
-            title={values.title}
+            value={values.title}
             onChange={(e) => handleInputChange(e)}
           />
         </Form.Field>
@@ -43,7 +44,7 @@ export default function EventForm({ setFormOpen, setEvents, createEvent, selecte
             type="text"
             placeholder="Category"
             name="category"
-            title={values.category}
+            value={values.category}
             onChange={(e) => handleInputChange(e)}
           />
         </Form.Field>
@@ -52,7 +53,7 @@ export default function EventForm({ setFormOpen, setEvents, createEvent, selecte
             type="text"
             placeholder="Description"
             name="description"
-            title={values.description}
+            value={values.description}
             onChange={(e) => handleInputChange(e)}
           />
         </Form.Field>
@@ -61,7 +62,7 @@ export default function EventForm({ setFormOpen, setEvents, createEvent, selecte
             type="text"
             placeholder="City"
             name="city"
-            title={values.city}
+            value={values.city}
             onChange={(e) => handleInputChange(e)}
           />
         </Form.Field>
@@ -70,7 +71,7 @@ export default function EventForm({ setFormOpen, setEvents, createEvent, selecte
             type="text"
             placeholder="Venue"
             name="venue"
-            title={values.venue}
+            value={values.venue}
             onChange={(e) => handleInputChange(e)}
           />
         </Form.Field>
@@ -79,7 +80,7 @@ export default function EventForm({ setFormOpen, setEvents, createEvent, selecte
             type="date"
             placeholder="Date"
             name="date"
-            title={values.date}
+            value={values.date}
             onChange={(e) => handleInputChange(e)}
           />
         </Form.Field>
