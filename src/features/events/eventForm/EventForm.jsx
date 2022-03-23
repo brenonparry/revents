@@ -3,10 +3,8 @@ import React, { useState } from "react";
 import { Button, Form, Header, Segment } from "semantic-ui-react";
 
 export default function EventForm({ setFormOpen, setEvents, createEvent, selectedEvent }) {
-  console.log(selectedEvent)
 
-  const initialValues = selectedEvent 
-  ?? {
+  const initialValues = selectedEvent ?? {
     title: "",
     category: "",
     description: "",
@@ -29,7 +27,7 @@ export default function EventForm({ setFormOpen, setEvents, createEvent, selecte
 
   return (
     <Segment clearing>
-      <Header content="Create new event" />
+      <Header content={ selectedEvent ? "Edit event details" : "Create new event"} />
       <Form onSubmit={handleFormSubmit}>
         <Form.Field>
           <input
