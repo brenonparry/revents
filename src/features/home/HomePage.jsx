@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container, Header, Segment, Image, Button, Icon } from 'semantic-ui-react'
 
-export default function HomePage() {
+export default function HomePage({history}) {
   return (
     <Segment inverted textAlign='center' vertical className='masthead'>
       <Container>
@@ -9,7 +9,7 @@ export default function HomePage() {
           <Image size='massive' src='/assets/logo.png' style={{marginBottom: 12}}/>
           Re-Vents
         </Header>
-        <Button size='huge' inverted>
+        <Button onClick={() => history.push('/events')} size='huge' inverted>
           Get Started!
           <Icon name='right arrow' inverted/>
         </Button>
