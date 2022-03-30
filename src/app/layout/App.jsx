@@ -5,7 +5,7 @@ import HomePage from "../../features/home/HomePage";
 import NavBar from "../../features/nav/NavBar";
 import EventForm from "../../features/events/eventForm/EventForm";
 import { Route } from "react-router-dom";
-import eventDetailedPage from "../../features/events/eventsDetailed/eventDetailedPage";
+import EventDetailedPage from "../../features/events/eventsDetailed/EventDetailedPage";
 
 export default function App() {
   const [formOpen, setFormOpen] = useState(false);
@@ -31,7 +31,7 @@ export default function App() {
             <NavBar setFormOpen={handleCreateFormOpen} />
             <Container className="main">
               <Route exact path="/events" component={EventDashboard} />
-              <Route path="/events/:id" component={eventDetailedPage} />
+              <Route path="/events/:id" component={EventDetailedPage} />
               <Route path="/createEvent" component={EventForm} />
             </Container>
           </>
