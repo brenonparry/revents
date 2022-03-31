@@ -3,7 +3,7 @@ import { Grid } from "semantic-ui-react";
 import EventList from "./EventList";
 import { sampleData } from "../../../app/api/sampleData";
 
-export default function EventDashboard({}) {
+export default function EventDashboard() {
 
   const [events, setEvents] = useState(sampleData);
  
