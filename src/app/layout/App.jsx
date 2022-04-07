@@ -4,11 +4,12 @@ import EventDashboard from "../../features/events/eventDashboard/EventDashboard"
 import HomePage from "../../features/home/HomePage";
 import NavBar from "../../features/nav/NavBar";
 import EventForm from "../../features/events/eventForm/EventForm";
-import { Route } from "react-router-dom";
+import { Route, useLocation } from "react-router-dom";
 import EventDetailedPage from "../../features/events/eventsDetailed/EventDetailedPage";
 import Sandbox from "../../features/sandbox/Sandbox";
 
 export default function App() {
+  const {key} = useLocation();
 
   return (
     <>
@@ -22,7 +23,7 @@ export default function App() {
               <Route exact path='/events' component={EventDashboard} />
               <Route exact path='/sandbox' component={Sandbox} />
               <Route path='/events/:id' component={EventDetailedPage} />
-              <Route path={['/createEvent', '/manage/:id' ]} component={EventForm} />
+              <Route path={['/createEvent', '/manage/:id' ]} component={EventForm} key={key}/>
             </Container>
           </>
         )}
